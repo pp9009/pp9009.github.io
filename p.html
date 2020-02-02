@@ -22,11 +22,13 @@
 <h1>音声再生</h1>
 <img src="spidey.jpg" alt="p-chan" class="image"/>
 <a href="index.html">戻る</a>
+<div id="test">変わるよ</div>
 <input type="file" accept="audio/*" id="audio_file">
 <audio id="player" controls></audio>
 <script>
     var recorder = document.getElementById('audio_file');
     var player = document.getElementById('player');
+    var test = document.getElementById('test');
 
     recorder.addEventListener('change', function (e) {
         console.log(e);
@@ -35,6 +37,12 @@
         // Do something with the audio file.
         player.src = URL.createObjectURL(file);
     });
+
+    document.getElementById("test").onclick = function() {
+        console.log(test);
+        test.innerHTML='変更';
+    };
+
 </script>
 </body>
 
