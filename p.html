@@ -16,36 +16,36 @@
             display: block;
         }
 
-        .change{
-            font-size: 150px;
-        }
+        /*.change{*/
+        /*    font-size: 150px;*/
+        /*}*/
     </style>
 </head>
 
 <body>
-<!--<h1>音声再生</h1>-->
-<!--<img src="spidey.jpg" alt="p-chan" class="image"/>-->
-<!--<a href="index.html">戻る</a>-->
-<div class="change" id="test">変わるよ</div>
-<!--<input type="file" accept="audio/*" id="audio_file">-->
-<!--<audio id="player" controls></audio>-->
+<h1>音声再生</h1>
+<img src="spidey.jpg" alt="p-chan" class="image"/>
+<a href="index.html">戻る</a>
+<!--<div class="change" id="test">変わるよ</div>-->
+<input type="file" accept="audio/*" id="audio_file">
+<audio id="player" controls></audio>
 <script>
-    // var recorder = document.getElementById('audio_file');
-    // var player = document.getElementById('player');
-    var test = document.getElementById('test');
+    var recorder = document.getElementById('audio_file');
+    var player = document.getElementById('player');
+    // var test = document.getElementById('test');
 
-    // recorder.addEventListener('change', function (e) {
-    //     console.log(e);
-    //     var file = e.target.files[0];
-    //     console.log(file);
-    //     // Do something with the audio file.
-    //     player.src = URL.createObjectURL(file);
-    // });
+    recorder.addEventListener('change', function (e) {
+        console.log(e);
+        var file = e.target.files[0];
+        console.log(file);
+        // Do something with the audio file.
+        player.src = URL.createObjectURL(file);
+    });
 
-    document.getElementById("test").onclick = function() {
-        console.log(test);
-        test.innerHTML='変わったよ！！';
-    };
+    // document.getElementById("test").onclick = function() {
+    //     console.log(test);
+    //     test.innerHTML='変わったよ！！';
+    // };
 
 </script>
 </body>
